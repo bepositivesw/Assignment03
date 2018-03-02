@@ -29,12 +29,12 @@ squareNumber(number);
 //STEP 3
 function percentOf(n1, n2) {
     'use strict';
-    if (n2 !== 0) {
+    if (n2 === 0) {
+        window.alert('The second number can not be zero!\nTry again!');
+    } else {
         var res = (n1 / n2 * 100);
         window.console.log(n1 + ' is ' + Math.round(res) + '% of ' + n2 + '.');
         return res;
-    } else {
-        window.alert('The second number can not be zero!\nTry again!');
     }
 }
 percentOf(number, number2);
@@ -43,12 +43,12 @@ percentOf(number, number2);
 //STEP 4
 function findModulus(n1, n2) {
     'use strict';
-    if (n2 !== 0) {
-        var res = n1 % n2;
+    if (n2 === 0) {
+        window.alert('The second number can not be zero!\nTry again!');
+    } else {
+        var res = n2 % n1;
         window.console.log(res + ' is the modulus of ' + n1 + ' and ' + n2 + '.');
         return res;
-    } else {
-        window.alert('The second number can not be zero!\nTry again!');
     }
 }
 findModulus(number, number2);
@@ -60,7 +60,7 @@ findModulus(number, number2);
 // to collect numbers that should be delimited by commas
 var inputs = window.prompt('Please enter multiple numbers and separate each number by commas.');
 
-// to transform inputs into a numerical array
+// to transform input "numbers" into a numerical array
 var numbers = inputs.split(",").map(Number);
 window.console.log(numbers);
 
@@ -73,6 +73,6 @@ function sumAll(nums) {
     for (i = 0; i < nums.length; i += 1) {
         sum += nums[i];
     }
-    window.console.log('The sum of all of the numbers is ' + sum + '.');
+    window.console.log('The sum of your input numbers is ' + sum + '.');
 }
 sumAll(numbers);

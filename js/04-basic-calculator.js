@@ -15,6 +15,7 @@ var operation = window.prompt('What operation would you like to perform (add, su
 //6.Within the calculate() function use a switch statement to evaluate the operation parameter being passed in. Depending on what it is, perform that operation, and display the result within an alert box.
 //7.Figure out how to make it so that if the user doesn’t enter either add, subtract, multiply, or divide, they are displayed an alert message telling them that. Then you’ll have to rerun the application so that the application asks the user for the numbers and operation once more.
 
+
 function calculate(n1, n2, operation) {
     'use strict';
     if (isNaN(n1) || isNaN(n2)) {
@@ -22,23 +23,23 @@ function calculate(n1, n2, operation) {
     } else {
         switch (operation) {
             case "add":
-                window.alert(n1 + n2);
+                window.alert(n1 + ' + ' + n2 + ' = ' + (n1 + n2));
                 break;
             case "subtract":
-                window.alert(n1 - n2);
+                window.alert(n1 + ' - ' + n2 + ' = ' + (n1 - n2));
                 break;
             case "multiply":
-                window.alert(n1 * n2);
+                window.alert(n1 + ' * ' + n2 + ' = ' + (n1 * n2));
                 break;
             case "divide":
                 if (n2 === 0) {
                     window.alert('The second number can not be zero for division!');
                 } else {
-                    window.alert(n1 / n2);
+                    window.alert(n1 + ' / ' + n2 + ' = ' + (n1 / n2));
                 }
                 break;
             default:
-                window.alert('The operation you entered is invalid! Try again!');
+                window.alert('The operation you entered is invalid!');
         }
     }
 }

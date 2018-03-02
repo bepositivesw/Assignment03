@@ -32,7 +32,6 @@ if (ranNum === 1) {
 
 
 
-
 // to compare choices and display the result
 function compareChoices(pA, pB) {
     'use strict';
@@ -42,39 +41,38 @@ function compareChoices(pA, pB) {
         switch (computerChoice) {
             case "rock":
                 if (pA === 'paper') {
-                    window.alert('The winner is person A!');
+                    window.alert('Paper covers rock. Person A won!');
                 } else if (pB === 'paper') {
-                    window.alert('The winner is person B!');
+                    window.alert('Paper covers rock. Person B won!');
                 } else {
-                    window.alert('Nobody won... Try again!');
+                    window.alert('Nobody won. Try again!');
                 }
                 break;
             case "paper":
                 if (pA === 'scissors') {
-                    window.alert('The winner is person A!');
+                    window.alert('Scissors cut paper. Person A won!');
                 } else if (pB === 'scissors') {
-                    window.alert('The winner is person B!');
+                    window.alert('Scissors cut paper. Person B won!');
                 } else {
-                    window.alert('Nobody won... Try again!');
+                    window.alert('Nobody won. Try again!');
                 }
                 break;
             case "scissors":
                 if (pA === 'rock') {
-                    window.alert('The winner is person A!');
+                    window.alert('Rock destroys scissors. Person A won!');
                 } else if (pB === 'rock') {
-                    window.alert('The winner is person B!');
+                    window.alert('Rock destroys scissors. Person B won!');
                 } else {
-                    window.alert('Nobody won... Try again!');
+                    window.alert('Nobody won. Try again!');
                 }
                 break;
         }
     }
 }
-//compareChoices(choiceA, choiceB);
 
 
 
-// to check if user's choice is valid
+// to check if user's input is valid
 var choices = ['rock', 'paper', 'scissors'];
 
 function checkChoice(pA, pB) {
@@ -82,7 +80,10 @@ function checkChoice(pA, pB) {
     if (choices.indexOf(pA) > -1 && choices.indexOf(pB) > -1) {
         compareChoices(pA, pB);
     } else {
-        window.alert('Invalid choice!');
+        window.alert('Invalid choice! Try again!');
     }
 }
 checkChoice(choiceA, choiceB);
+
+
+// P.S. There are many warning messages of formatting...because I use Beautify auto-formatting.
